@@ -1,9 +1,14 @@
+import { NgForOf, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
+import { DonutCardComponent } from '../../components/donut-card/donut-card.component';
 import { Donut } from '../../models/donut.model';
 import { DonutService } from '../../services/donut.service';
 
 @Component({
+  standalone: true,
+  imports: [RouterModule, NgIf, NgForOf, DonutCardComponent],
   selector: 'donut-list',
   template: `
     <div>
